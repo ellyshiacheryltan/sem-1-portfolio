@@ -1,0 +1,302 @@
+body {
+  font-family: 'Analogist';
+  font-weight: bold;
+  overflow: visible;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* heading */
+  .heading {
+    margin-top: 4vh;
+    display: flex;
+  }
+
+  .heading a {
+    padding: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 0;
+    padding-right: 33vw;
+    font-size: 24px;
+    color: #594600;
+    text-decoration: none;
+  }
+
+  .heading a:hover {
+    color: #c39565;
+  }
+
+  .heading h2 {
+    font-size: 48px;
+    color: #594600;
+    text-align: center;
+  }
+
+  .heading h3 {
+    font-size: 23px;
+    color: #594600;
+  }
+
+
+/* works gallery */
+  .gallery {
+      border: 1px solid #ccc;
+    }
+    
+  .gallery:hover {
+      border: 1px solid #777;
+  }
+
+  .gallery img {
+      width: 100%;
+      height: auto;
+  }
+
+  * {
+      box-sizing: border-box;
+  }
+
+  .responsive {
+      padding: 6px;
+      float: left;
+      width: 24.99999%;
+  }
+
+  .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+/* image hover */
+
+.hover-container {
+  position: relative;
+  width: 100%;
+  top: 2vh;
+  cursor: pointer;
+}
+
+.hover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #cfc2a4;
+}
+
+.hover-container:hover .hover-overlay {
+  opacity: 0.9;
+}
+
+.hover-text {
+  text-align: center;
+  color: #594600;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.hover-text p {
+  padding: 1vw;
+  font-size: 16px;
+}
+  
+/* popup */
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: #E7D7B5;
+    border-radius: 10px;
+    z-index: 10;
+    width: 850px;
+    height: 600px;
+    max-width: 90%;
+    pointer-events: none;
+    overflow: scroll;
+    -ms-overflow-style: none;
+  }
+
+  .popup::-webkit-scrollbar {
+    display: none;
+  }
+
+  .popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: all;
+    z-index: 12;
+  }
+
+  .popup-header {
+    position: sticky;
+    top: 0;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    position: fixed;
+    color: #413431;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .close-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 36px;
+    font-weight: bold;
+    left: 95%;
+  }
+
+  .popup-body, .reflection {
+    font-family: 'Louis George Cafe';
+    font-weight: lighter;
+    padding: 10px 15px;
+  }
+
+  .reflection-heading {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 11;
+    cursor: pointer;
+  }
+
+/* images */
+  .img-illustrations {
+    width: 80%;
+    position: relative;
+    left: 12%;
+  }
+
+  .img-sketch-wireframe {
+    width: 80%;
+    position: relative;
+    left: 12%;
+  }
+
+  .personal-prototype {
+    position: relative;
+    left: 32%;
+  }
+
+  .video {
+    width: 70%;
+    position: relative;
+    left: 15%;
+  }
+
+  .img-paper-prototype1 {
+    width: 65%;
+    position: relative;
+    left: 15%;
+  }
+
+  .img-paper-prototype2 {
+    width: 65%;
+    position: relative;
+    left: 15%;
+  }
+
+  .old-portweb-link {
+    font-family: 'Analogist';
+    position: relative;
+    left: 37%;
+    font-size: 20px;
+    font-weight: bold;
+    color:#413431;
+  }
+
+  .old-portweb-link:hover {
+    color: #c39565;
+  }
+
+/* markdowns */
+
+code {
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: 'Analogist';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../../assets/Fonts/Analogist.ttf") format('truetype');}
+
+@font-face {
+  font-family: 'Louis George Cafe';
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/LouisGeorgeCafe.ttf") format('truetype');}
+
+  
+@media (max-width: 500px) {
+  .heading {
+    width: 100%;
+    gap: 0;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .heading a {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .heading div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .responsive {
+    width: 100%;
+  }
+}

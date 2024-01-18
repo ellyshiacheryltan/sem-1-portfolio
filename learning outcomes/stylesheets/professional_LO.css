@@ -1,0 +1,187 @@
+body {
+    font-family: 'Analogist';
+    font-weight: bold;
+    overflow: visible;
+    color: #594600;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+/* heading */
+    .heading {
+        margin-top: 4vh;
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+
+    .heading a {
+        margin-left: 2vw;
+        padding: 12px;
+        font-size: 24px;
+        color: #594600;
+        text-decoration: none;
+    }
+
+    .heading a:hover {
+        color: #c39565;
+    }
+
+    .heading h2 {
+        font-size: 48px;
+        color: #594600;
+        text-align: center;
+    }
+
+    .heading h3 {
+        font-size: 23px;
+        color: #594600;
+    }
+
+/* content */
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 4vw;
+    }
+
+    .content p {
+        font-family: 'Louis George Cafe';
+        font-size: 20px;
+        padding: 1vw;
+        padding-top: 0;
+    }
+
+    .reflection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 26px;
+        align-self: flex-start;
+        padding: 1vw;
+        padding-bottom: 0;
+    }
+
+    .reflection-text {
+        margin-left: -115px;
+    }
+
+    .reflection-text.LO3 {
+        margin-left: 0;
+    }
+
+/* images */
+    .images {
+        width: 60%;
+        padding: 1vw;
+      }
+
+    .LO3-img {
+        width: 95%;
+        padding: 1vw;
+    }
+
+    .team-charter-img, .group-feedback-img {
+        width: 600;
+        height: 350;
+    }
+
+/* LO2 iframes */
+    iframe {
+        margin: 1vw;
+        background-color: white;
+    }
+
+/* LO4 image carousel */
+    .carousel {
+        width: 47%;
+    }
+
+    .carousel.is-transitioning {
+        pointer-events: none;
+    }
+
+    .carousel__list {
+        position: relative;
+        margin: 0;
+        padding: 0 0 calc((1080 / 1920) * 100%);
+        width: 100%;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    .carousel__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* Transition Class */
+    .carousel.is-transitioning .carousel__item,
+    .carousel.is-transitioning .carousel__image,
+    .carousel.is-transitioning .carousel__heading {
+        transition: 500ms transform cubic-bezier(0.65, 0, 0.35, 1);
+        will-change: transform;
+    }
+
+    /* Normal Direction */
+        .carousel__item {
+            transform: translateX(100%);
+        }
+
+        .carousel__item.is-transitioning-in {
+            transform: translateX(0%);
+        }
+
+        .carousel__item.is-transitioning-out {
+            transform: translateX(-100%);
+        }
+
+    /* Reversed Direction */
+        .carousel.is-transitioning-inversed .carousel__item {
+            transform: translateX(-100%);
+        }
+
+        .carousel.is-transitioning-inversed .carousel__item.is-transitioning-in {
+            transform: translateX(0%);
+        }
+
+        .carousel.is-transitioning-inversed .carousel__item.is-transitioning-out {
+            transform: translateX(100%);
+        }
+
+    .carousel__image {
+        position: relative;
+        width: 620;
+        height: 348;
+        object-fit: cover;
+    }
+
+    .carousel__navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .carousel__button {
+        position: relative;
+        overflow: hidden;
+        font-family: 'Louis George Cafe';
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../assets/fonts/LouisGeorgeCafe.ttf") format('truetype');}
+      

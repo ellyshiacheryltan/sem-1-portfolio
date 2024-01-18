@@ -1,0 +1,197 @@
+body {
+    position: relative;
+    margin: 0;
+    background-color: rgb(160, 169, 187);
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 6%;
+    left: 6.7%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 7vw;
+    font-family: 'Artisual Deco';
+    letter-spacing: 7px;
+    color: #9a2a1b;
+    position: absolute;
+    top: 35%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffcfcf, 0 0 20px #fff5ce, 0 0 40px #fff4c3, 0 0 60px #fffadc, 0 0 80px #fff9df, 0 0 90px #fff7dd, 0 0 100px #fffcee;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #ffdbdb, 0 0 20px #fff7dd, 0 0 40px #fffbe7, 0 0 60px #fffae5, 0 0 80px #fff9da, 0 0 90px #fff9e3, 0 0 100px #fffcf3;
+  }
+}
+
+
+.image-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scaleY(1.015);
+}
+
+.ticket {
+    position: absolute;
+    width: 13vw;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveUpDown 0.5s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(-7%);
+    }
+}
+
+.door1 {
+    position: absolute;
+    width: 12.3vw;
+    top: 84%;
+    left: 19.2%;
+    transform: translate(-50%, -50%) scaleX(1.05) scaleY(1.02);
+    z-index: 1;
+}
+
+.door1:hover {
+    opacity: 0;
+}
+
+.door1-open {
+    position: absolute;
+    width: 13vw;
+    top: 84%;
+    left: 19.2%;
+    transform: translate(-50%, -50%) scaleY(1.05) scaleX(0.98);
+    z-index: 0;
+}
+
+.indoor1 {
+    position: absolute;
+    width: 13vw;
+    top: 83.5%;
+    left: 18.9%;
+    transform: translate(-50%, -50%) scaleY(1.12) scaleX(0.8);
+    z-index: -2;
+}
+
+.door2 {
+    position: absolute;
+    width: 12.3vw;
+    top: 84%;
+    left: 31.8%;
+    transform: translate(-50%, -50%) scaleX(1.05) scaleY(1.02);
+    z-index: 1;
+}
+
+.door2:hover {
+    opacity: 0;
+}
+
+.door2-open {
+    position: absolute;
+    width: 13vw;
+    top: 84%;
+    left: 31.8%;
+    transform: translate(-50%, -50%) scaleY(1.05) scaleX(0.98);
+    z-index: 0;
+}
+
+.indoor2 {
+    position: absolute;
+    width: 13vw;
+    top: 83.5%;
+    left: 31.5%;
+    transform: translate(-50%, -50%) scaleY(1.12) scaleX(0.8);
+    z-index: -2;
+}
+
+.door3 {
+    position: absolute;
+    width: 12.3vw;
+    top: 84%;
+    left: 69.1%;
+    transform: translate(-50%, -50%) scaleX(1.05) scaleY(1.02);
+    z-index: 1;
+}
+
+.door3:hover {
+    opacity: 0;
+}
+
+.door3-open {
+    position: absolute;
+    width: 13vw;
+    top: 84%;
+    left: 69.1%;
+    transform: translate(-50%, -50%) scaleY(1.05) scaleX(0.98);
+    z-index: 0;
+}
+
+.indoor3 {
+    position: absolute;
+    width: 13vw;
+    top: 83.5%;
+    left: 68.7%;
+    transform: translate(-50%, -50%) scaleY(1.12) scaleX(0.8);
+    z-index: -2;
+}
+
+.door4 {
+    position: absolute;
+    width: 12.3vw;
+    top: 84%;
+    left: 81.6%;
+    transform: translate(-50%, -50%) scaleX(1.05) scaleY(1.02);
+    z-index: 1;
+}
+
+.door4:hover {
+    opacity: 0;
+}
+
+.door4-open {
+    position: absolute;
+    width: 13vw;
+    top: 84%;
+    left: 81.6%;
+    transform: translate(-50%, -50%) scaleY(1.05) scaleX(0.98);
+    z-index: 0;
+}
+
+.indoor4 {
+    position: absolute;
+    width: 13vw;
+    top: 83.5%;
+    left: 81.4%;
+    transform: translate(-50%, -50%) scaleY(1.12) scaleX(0.8);
+    z-index: -2;
+}
+
+@font-face {
+    font-family: 'Artisual Deco';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../assets/Fonts/ArtisualDecoBlack.otf") format('opentype');
+}

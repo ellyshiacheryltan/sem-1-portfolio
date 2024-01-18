@@ -1,0 +1,89 @@
+body {
+    color: #594600;
+    overflow: visible;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 64px;
+    letter-spacing: 4px;
+    padding-left: 15vw;
+    padding-top: 3vw;
+}
+
+.content {
+    font-family: 'Louis George Cafe';
+    display: flex;
+}
+
+.self-photo {
+    width: 40%;
+    padding-top: 3vw;
+    padding-left: 15vw;
+}
+
+.content ul {
+    font-size: 28px;
+    padding-top: 3vw;
+    padding-left: 20vw;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    position: absolute;
+    border-bottom: 3px solid #594600;
+}
+
+.line.one {
+    width: 19vw;
+    margin-left: -18vw;
+    padding: 7px;
+}
+
+.line.two {
+    width: 14vw;
+    margin-top: -20px;
+    margin-left: 3px;
+}
+
+.desc {
+    padding: 1vw;
+}
+
+.desc.one {
+    padding-top: 0;
+    padding-left: 2.5vw;
+}
+
+.desc.two {
+    margin-left: -19vw;
+}
+
+.desc.three {
+    margin-top: -4vw;
+    padding-left: 15vw;
+}
+
+.text p {
+    font-size: 18px;
+    padding: 5vw;
+    padding-left: 2vw;
+    padding-right: 7vw;
+    padding-top: 11vw;
+    padding-bottom: 0;
+    line-height: 2.5vw;
+    text-align: right;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../assets/Fonts/LouisGeorgeCafe.ttf") format('truetype');}

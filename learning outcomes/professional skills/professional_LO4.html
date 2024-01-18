@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Professional Skills</title>
+        <link rel="stylesheet" href="../../stylesheets/reset.css">
+        <link rel="stylesheet" href="../../stylesheets/works.css">
+        <link rel="stylesheet" href="../stylesheets/professional_LO.css">
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <a href="../../index.html">
+                <img src="../../assets/images/personal_logo.png">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../../works.html">Works</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- heading: title of learning outcome -->
+        <div class="heading">
+            <a href="professional_LO.html">< back</a>
+            <div>
+                <h2>Professional Skills</h2>
+                <h3>Learning Outcome 4 : Targeted Interaction</h3>
+            </div>
+        </div>
+        
+        <!-- page content -->
+        <div class="content">
+            <p>When working on my assignments, both individual and group, I make sure to always take into account the stakeholder 
+                of our project, which in this semester it's the teachers. I do this by regularly asking for feedback from the 
+                teachers, and when applicable, implement the feedback to the projects. Then for the group project, I also often come 
+                up with the initiative to ask for group feedbacks to the teachers, and also come up with the initiative of 
+                suggesting to the group members to discuss what we have to do as a group, and take notes in the team's workspace 
+                in Notion of what were discussed and what should be done. Documentations and useful resources of the group project 
+                are also included in the Notion workspace.</p>
+            <iframe src="Group-Notion.html" width="600" height="400"></iframe>
+            <br>
+            <p>For the group project, me and my teammates also made a Team Charta before we start with all group works, to determine what
+                values we want our group to have and keep throughout the group work.
+            </p>
+            <a target="_blank" href="../assets/images/team-charter.png">
+                <img class="team-charter-img" src="../assets/images/team-charter.png"/>
+            </a>
+            <br>
+            <p>Me and my teammates also did group retrospectives to evaluate our behaviors throughout the group work, then decide
+                which behaviors we have to start doing or stop doing, and which behaviors we have to keep.
+            </p>
+            
+            <!-- group retrospective image carousel -->
+            <div class="carousel">
+                <ul class="carousel__list">
+                    <li class="carousel__item is-transitioning-in">
+                        <a target="_blank" href="../assets/images/group-retrospective-page-1.png">
+                            <img class="carousel__image" src="../assets/images/group-retrospective-page-1.png" alt="interview transcript page 1"/>
+                        </a>
+                    </li>
+                    <li class="carousel__item">
+                        <a target="_blank" href="../assets/images/group-retrospective-page-2.png">
+                            <img class="carousel__image" src="../assets/images/group-retrospective-page-2.png" alt="interview transcript page 2"/>
+                        </a>
+                    </li>
+                </ul>
+
+                <nav class="carousel__navigation">
+                    <button class="carousel__button carousel__button--previous">< previous</button>
+                    <button class="carousel__button carousel__button--next">next ></button>
+                </nav>
+            </div>
+
+            <h2 class="reflection">Reflection</h2>
+            <p>I learned how to always be mindful about the importance of the involvement of the stakeholder in the project, to 
+                execute my role well and be initiative while working in a group, and how to align my behaviors during group
+                projects with the values that we agreed on in the Team Charta. I also learned, through giving feedback to my teammates,
+                how to address their behaviors that don't align with the values of our team.</p>
+        </div>
+
+        <!-- Carousel: Script -->
+        <script>
+            /**
+            *
+            * UI Elements
+            */
+            const carousels = document.querySelectorAll(".carousel");
+
+            carousels.forEach(($carousel) => {
+                const $list = $carousel.querySelector(".carousel__list");
+                const $previous = $carousel.querySelector(".carousel__button--previous");
+                const $next = $carousel.querySelector(".carousel__button--next");
+
+                /**
+                *
+                * Variables
+                */
+                const limit = $list.children.length - 1;
+                let timeout;
+                let index = 0;
+                let current = $list.children[index];
+                let previous = current;
+
+                /**
+                *
+                * Here is where
+                * the magic happens
+                */
+                const animate = function (type = "increment") {
+                    // Performance update
+                    // Didn't show in class
+                    if (timeout) {
+                        clearTimeout(timeout);
+                    }
+
+                    // Remove transitioning classes to the carousel
+                    $carousel.classList.remove("is-transitioning");
+
+                    // What direction?
+                    if (type === "increment") {
+                        $carousel.classList.remove("is-transitioning-inversed");
+                    }
+
+                    if (type === "decrement") {
+                        $carousel.classList.add("is-transitioning-inversed");
+                    }
+
+                    // Asign current to previous
+                    previous = current;
+
+                    // Wait for the next frame to apply the transition
+                    timeout = setTimeout(function () {
+                        $carousel.classList.add("is-transitioning");
+
+                        // Add transition classes to the item
+                        previous.classList.remove("is-transitioning-in");
+                        previous.classList.add("is-transitioning-out");
+
+                        // Remove transition out class after 500ms
+                        timeout = setTimeout(function () {
+                            clearTimeout(timeout);
+                            $carousel.classList.remove("is-transitioning");
+                            previous.classList.remove("is-transitioning-out");
+                        }, 500);
+
+                        // Increment index
+                        if (type === "increment") {
+                            index = (index + 1) % (limit + 1);
+                        }
+
+                        // Decrement index
+                        if (type === "decrement") {
+                            index = (index - 1 + limit + 1) % (limit + 1);
+                        }
+
+                        // Re-assign current
+                        current = $list.children[index];
+                        current.classList.add("is-transitioning-in");
+
+                        // Log it
+                        // console.log(index, previous, current);
+                    }, 16);
+                };
+
+                /**
+                *
+                * Event Listeners
+                */
+                $previous.onclick = function () {
+                    if(index > 0) {
+                        animate("decrement");
+                    };
+                };
+
+                $next.onclick = function () {
+                    if(index < limit){
+                        animate("increment");
+                    }
+                };
+            });
+        </script>
+    </body>
+</html>

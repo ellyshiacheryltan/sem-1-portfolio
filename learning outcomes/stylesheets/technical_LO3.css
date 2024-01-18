@@ -1,0 +1,46 @@
+.content {
+    display: flex;
+    justify-content: space-around;
+    margin: 3vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.prototype-left, .prototype-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h3 {
+    font-size: 20px;
+    color: #594600;
+    padding: 1vw;
+}
+
+.reflection {
+    font-family: 'Analogist';
+    font-weight: bold;
+    color: #594600;
+    font-size: 26px;
+    align-self: flex-start;
+    margin-left: 70px;
+    padding: 30px;
+    padding-top: 0;
+    padding-left: 10px;
+}
+
+.reflection-text {
+    font-family: 'Louis George Cafe';
+    padding-top: 7px;
+    font-size: 18px;
+    width: 600px;
+}
+
+@font-face {
+    font-family: 'Analogist';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../../assets/Fonts/Analogist.ttf") format('truetype');}

@@ -1,0 +1,221 @@
+body {
+    color: #594600;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    padding-top: 0;
+}
+
+.content h2 {
+    font-size: 32px;
+    padding: 2vw;
+    padding-bottom: 0;
+}
+
+.content h3 {
+    font-size: 24px;
+    padding: 2vw;
+    padding-bottom: 0;
+}
+
+.paragraph {
+    font-family: 'Louis George Cafe';
+    font-size: 20px;
+    padding: 2vw;
+}
+
+.paragraph.one {
+    padding-top: 1vw;
+    padding-bottom: 0;
+}
+
+.paragraph.two, .four {
+    padding-bottom: 0;
+    padding-top: 1vw;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.paragraph.three {
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.paragraph.last {
+    padding-top: 1vw;
+}
+
+.survey-transcripts {
+    display: flex;
+}
+
+iframe, .carousel {
+    padding: 1vw; 
+}
+
+.persona-doc {
+    display: flex;
+}
+
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    width: 1000px;
+}
+
+.user-research-doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+}
+
+.card-sorting-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+}
+
+/* images */
+    .persona-img {
+        padding: 1vw;
+        width: 100%;
+        align-self: center;
+    }
+
+/* icons */
+    .document-icon {
+        align-self: center;
+        padding: 1vw;
+    }
+
+    .document-icon i {
+        color: #594600;
+        font-size: 64px;
+    }
+
+    .document-icon i:hover {
+        color: #c39565;
+    }
+
+/* image carousel */
+    .carousel {
+        width: 34%;
+    }
+
+    .carousel.card-sorting {
+        width: 65%;
+    }
+
+    .carousel.is-transitioning {
+        pointer-events: none;
+    }
+
+    .carousel__list {
+        position: relative;
+        margin: 0;
+        padding: 0 0 calc((626 / 460) * 100%);
+        width: 100%;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    .carousel__list.card-sorting {
+        position: relative;
+        margin: 0;
+        padding: 0 0 calc((240 / 240) * 100%);
+        width: 100%;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    .carousel__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* Transition Class */
+    .carousel.is-transitioning .carousel__item,
+    .carousel.is-transitioning .carousel__image,
+    .carousel.is-transitioning .carousel__heading {
+        transition: 500ms transform cubic-bezier(0.65, 0, 0.35, 1);
+        will-change: transform;
+    }
+
+    /* Normal Direction */
+        .carousel__item {
+            transform: translateX(100%);
+        }
+
+        .carousel__item.is-transitioning-in {
+            transform: translateX(0%);
+        }
+
+        .carousel__item.is-transitioning-out {
+            transform: translateX(-100%);
+        }
+
+    /* Reversed Direction */
+        .carousel.is-transitioning-inversed .carousel__item {
+            transform: translateX(-100%);
+        }
+
+        .carousel.is-transitioning-inversed .carousel__item.is-transitioning-in {
+            transform: translateX(0%);
+        }
+
+        .carousel.is-transitioning-inversed .carousel__item.is-transitioning-out {
+            transform: translateX(100%);
+        }
+
+    .carousel__image {
+        position: relative;
+        width: 388;
+        height: 544;
+        object-fit: cover;
+    }
+
+    .carousel__image.card-sorting {
+        position: relative;
+        width: 300;
+        height: 300;
+        object-fit: cover;
+    }
+
+    .carousel__navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .carousel__button {
+        position: relative;
+        overflow: hidden;
+        font-family: 'Louis George Cafe';
+        background: transparent;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+/* fonts */
+@font-face {
+    font-family: 'Louis George Cafe';
+    font-style: normal;
+    font-weight: 100;
+    src: url("../../assets/Fonts/LouisGeorgeCafe.ttf") format('truetype');}
