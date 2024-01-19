@@ -1,5 +1,5 @@
 # portfolio sem-1
-[portfolio](https://ellyshiacheryltan.github.io/sem1-portfolio/)
+[portfolio](https://ellyshiacheryltan.github.io/sem-1-portfolio/)
 
 
 ## Getting started

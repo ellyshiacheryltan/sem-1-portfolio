@@ -263,6 +263,24 @@ code {
   font-family: monospace;
 }
 
+/* icons */
+
+.document-icon {
+  position: relative;
+  left: 45%;
+  align-self: center;
+  padding: 1vw;
+}
+
+.document-icon i {
+  color: #594600;
+  font-size: 64px;
+}
+
+.document-icon i:hover {
+  color: #c39565;
+}
+
 @font-face {
   font-family: 'Analogist';
   font-style: normal;
